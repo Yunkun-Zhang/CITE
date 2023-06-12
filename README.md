@@ -1,7 +1,6 @@
-# [Code] CITE
+# [Code] CITE: Connecting Image and Text Embeddings
 
 <!-- select Model and/or Data and/or Code as needed -->
-### Welcome to OpenMEDLab! 👋
 
 <!--
 **Here are some ideas to get you started:**
@@ -59,15 +58,19 @@ Updated on 2023.06.08
 
 This repository provides the official implementation of *Text-guided Foundation Model Adaptation for Pathological Image Classification*.
 
-- 1 Low computational cost
-- 2 Data-efficient
-- 3 Compatible with various foundation models
+- Foundation model adaptation to medical imaging analysis
+- Data-efficient and low-cost visual prompt tuning
+- Injection of medical in-domain knowledge via text
+- Compatibility with various foundation models
 
 
 ## Links
 
 - [Paper](https://)
 - [Code](https://github.com/Yunkun-Zhang/CITE)
+- Pre-trained models
+  - [CLIP](https://github.com/openai/CLIP)
+  - [BioLinkBERT](https://huggingface.co/michiyasunaga/BioLinkBERT-large)
 <!-- [Code] may link to your project at your institute -->
 
 
@@ -91,7 +94,9 @@ An overview of CITE:
 
 ## Dataset
 
-Prepare the PatchGastric dataset:
+The PatchGastric dataset includes histopathological image patches extracted from H&E stained whole slide images (WSI) of stomach adenocarcinoma endoscopic biopsy specimens. The dataset contains 9 subtypes of gastric adenocarcinoma WSIs. We choose 3 major subtypes including “well differentiated tubular adenocarcinoma”, “moderately differentiated tubular adenocarcinoma”, and “poorly differentiated adenocarcinoma” to form a 3-class grading-like classification task with 179,285 patches of size 300x300 from 693 WSIs.
+
+To prepare the PatchGastric dataset:
 
 1. Download `captions.csv` and `patches_captions.zip` from [PatchGastricADC22](https://zenodo.org/record/6550925).
 2. Put them in `data/` and unzip the file.
@@ -115,7 +120,6 @@ mim install mmcls==0.25.0
 pip install -r requirements.txt
 ```
 
-
 **Preprocess**
 
 To follow our split of the dataset, please generate the annotation files by running:
@@ -128,14 +132,12 @@ Or you can generate your own split following mmcls format:
 filename label
 ```
 
-
 **Training**
 
 The config files follow [mmcls](https://github.com/open-mmlab/mmclassification) style.
 ```bash
 PYTHONPATH=.:$PYTHONPATH mim train <config>
 ```
-
 
 **Testing**
 ```bash
@@ -144,32 +146,9 @@ PYTHONPATH=.:$PYTHONPATH mim test <config> --checkpoint <checkpoint> --metrics <
 
 ## 🙋‍♀️ Feedback and Contact
 
-- [Email](mailto:ykzhang@sjtu.edu.cn)
-
-<!--
-## 🛡️ License
-
-This project is under the CC-BY-NC 4.0 license. See [LICENSE](LICENSE) for details.
--->
-
-<!--
-## 🙏 Acknowledgement
-
-A lot of code is modified from [monai](https://github.com/Project-MONAI/MONAI).
--->
+- [Yunkun Zhang (Dequan Wang's Group)](mailto:yunkunzhang@dqwang.group)
+- [Dequan Wang's Group](https://dqwang.group/)
 
 ## 📝 Citation
 
 TO BE ADDED.
-
-<!--
-If you find this repository useful, please consider citing this paper:
-```
-@article{John2023,
-  title={paper},
-  author={John},
-  journal={arXiv preprint arXiv:},
-  year={2023}
-}
-```
--->
