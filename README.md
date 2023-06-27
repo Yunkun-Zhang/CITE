@@ -50,7 +50,7 @@
 [![GitHub license](https://img.shields.io/github/license/opendilab/DI-engine)](https://github.com/opendilab/DI-engine/blob/master/LICENSE)
 -->
 
-Updated on 2023.06.08
+Updated on 2023.06.27
 
 
 
@@ -151,4 +151,11 @@ PYTHONPATH=.:$PYTHONPATH mim test <config> --checkpoint <checkpoint> --metrics <
 
 ## 📝 Citation
 
-TO BE ADDED.
+```text
+@inproceedings{zhang2023text,
+  title={Text-guided Foundation Model Adaptation for Pathological Image Classification},
+  author={Zhang, Yunkun and Gao, Jin and Zhou, Mu and Wang, Xiaosong and Qiao, Yu and Zhang, Shaoting and Wang, Dequan},
+  booktitle={MICCAI},
+  year={2023}
+}
+```
