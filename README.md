@@ -50,7 +50,7 @@
 [![GitHub license](https://img.shields.io/github/license/opendilab/DI-engine)](https://github.com/opendilab/DI-engine/blob/master/LICENSE)
 -->
 
-Updated on 2023.07.28
+Updated on 2023.12.11
 
 
 
@@ -71,7 +71,7 @@ This repository provides the official implementation of *Text-guided Foundation 
 - Pre-trained models
   - [CLIP](https://github.com/openai/CLIP)
   - [BioLinkBERT](https://huggingface.co/michiyasunaga/BioLinkBERT-large)
-<!-- [Code] may link to your project at your institute -->
+  <!-- [Code] may link to your project at your institute -->
 
 
 <!-- give a introduction of your project -->
@@ -136,12 +136,12 @@ filename label
 
 The config files follow [mmcls](https://github.com/open-mmlab/mmclassification) style.
 ```bash
-PYTHONPATH=.:$PYTHONPATH mim train <config>
+PYTHONPATH=.:$PYTHONPATH mim train mmcls <config>
 ```
 
 **Testing**
 ```bash
-PYTHONPATH=.:$PYTHONPATH mim test <config> --checkpoint <checkpoint> --metrics <metrics>
+PYTHONPATH=.:$PYTHONPATH mim test mmcls <config> --checkpoint <checkpoint> --metrics <metrics>
 ```
 
 ## 🙋‍♀️ Feedback and Contact

@@ -5,7 +5,7 @@ _base_ = [
     '../_base_/sgd_i1000_lr0.001-cos.py'
 ]
 
-lr = 1e-3
+lr = 0.03
 n = 'all'
 vpl = 1
 run_name = f'clip-vitb16_biolinkbert-l_vpl{vpl}_p{n}-cb_bs128_i1000_lr{lr}'
