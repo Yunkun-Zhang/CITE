@@ -15,6 +15,9 @@ prompt = '{}'
 model = dict(
     type='ImageClassifier',
     backbone=dict(type='CLIPImageBackbone', arch=arch),
-    head=dict(type='CLIPTextHead', texts=[prompt.format(t) for t in TEXTS]))
+    head=dict(
+        type='CLIPTextHead',
+        arch=arch,
+        texts=[prompt.format(t) for t in TEXTS]))
 
 work_dir = f'work_dirs/gastric_baseline/{run_name}'
